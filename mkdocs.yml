@@ -3,7 +3,8 @@ site_url: https://yuriyteplyakov.github.io/mywiki/
 nav:
   - index: index.md
   - GIT: GIT/git.md
-  - Turn-mill:
+  - CHPU:
+    - Turn-mill:
       - TMC 6510: CHPU/TMC6510.md
 
 theme:
