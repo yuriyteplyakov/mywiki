@@ -2,7 +2,9 @@ site_name: mywiki
 site_url: https://yuriyteplyakov.github.io/mywiki/
 nav:
   - index: index.md
-  - TMC 6510: TMC6510.md
+  - GIT: - GIT\git.md
+  - Turn-mill:
+      - TMC 6510: CHPU\TMC6510.md
   - mkdocs: mckdocs.md
   - env: env.md
   - pip: pip.md
