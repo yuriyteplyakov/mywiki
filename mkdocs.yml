@@ -6,7 +6,7 @@ nav:
   - CHPU:
     - Turn-mill:
       - TMC 6510: CHPU/TMC6510.md
-      - Tmc cycles: CHPU/TMC6510-cycles.md
+      - Tmc cycles: CHPU/TMC6510-EAST-cycles.md
 
 theme:
   name: material
