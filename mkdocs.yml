@@ -3,16 +3,19 @@ site_url: https://yuriyteplyakov.github.io/mywiki/
 nav:
   - index: index.md
   - GIT: GIT/git.md
+  - DJANGO:
+    - ENV: Django/env.md
+    - PIP: Django/pip.md
   - CNC manual:
     - Turn-mill:
       - TMC 6510:
         - M-G codes: CNCmanual/TMC6510/codes.md
-        - Общая информация: CNCmanual/TMC6510.md
+        - Общая информация: CNCmanual/TMC6510/TMC6510.md
         - EAST:
           - cycles: CNCmanual/TMC6510/EAST/cycles.md
         - WEST:
           - cycles: CNCmanual/TMC6510/WEST/cycles.md
-
+  
 
 theme:
   name: material

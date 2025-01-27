@@ -1,3 +1,4 @@
+``` py
 git remote add origin https://github.com/yuriyteplyakov/mywiki.git
 
 git push origin master --force (принудительно)
@@ -14,3 +15,4 @@ git add . (записать изменение всех файлов)
 
 git commit -m 'TMC 6510 start' (коммит)
 
+```
