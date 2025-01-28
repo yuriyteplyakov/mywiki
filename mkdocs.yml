@@ -1,7 +1,7 @@
 site_name: mywiki
 site_url: https://yuriyteplyakov.github.io/mywiki/
 nav:
-  - index: index.md
+  - главная: index.md
   - GIT: GIT/git.md
   - DJANGO:
     - ENV: Django/env.md
