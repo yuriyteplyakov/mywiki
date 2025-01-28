@@ -70,3 +70,27 @@ G76 C1 A55 X99.15 Z-14 K1.73 V0.06 Q0.4 U0.06 F2
 ( [R#17] - taper amount, signed, radial, optional)
 ( U#20 - depth start, radial)
 ```
+
+### пример упорной резьбы с углами 3/30 градусов 102.8x2
+``` gcode
+(пример с вызовом подпрограммы)
+G65 P="THR" A-3 E0.06 H102.6 U0.4 X99.15 Z-14 F2
+
+(стандартный цикл на стойке)
+(данный пример для трубной резьбы)
+G76 C1 A55 X99.15 Z-14 K1.73 V0.06 Q0.4 U0.06 F2
+```
+
+### прогремма THR
+``` gcode
+
+(PARAMS:)
+( [A#0] - half angle, signed, optional)
+( E#4 - depth finish, radial)
+( H#7 - X start)
+( [Q#16] - angle for shifting the start angle, 0..360, optional)
+( [R#17] - taper amount, signed, radial, optional)
+( U#20 - depth start, radial)
+
+```
+
