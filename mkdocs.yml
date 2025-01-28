@@ -2,10 +2,14 @@ site_name: mywiki
 site_url: https://yuriyteplyakov.github.io/mywiki/
 nav:
   - главная: index.md
-  - GIT: GIT/git.md
+  - Machine learning:
+    
   - DJANGO:
     - ENV: Django/env.md
     - PIP: Django/pip.md
+    - PROJECT: Django/project.md
+    - SETTINGS: Django/settings.md
+  - GIT: GIT/git.md
   - CNC manual:
     - Turn-mill:
       - TMC 6510:
