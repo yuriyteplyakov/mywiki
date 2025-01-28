@@ -39,7 +39,7 @@ X72
 X74
 (FINISH)
 #1 = 0.4 (RAD SKRUGL)
-G0 G41 X[75.2 + 2 * #1]
+G0 G41 X[75.2 + 2 * #1] (G41 корректор, если материал слева)
 G1 Z0 F0.3
 G2 X75.2 Z[-#1] R#1 F0.05
 G1 Z-2.125 F0.2 (D75 CHIST)
@@ -47,4 +47,26 @@ X66.06 Z[-2.125 - #1] R#1 F0.05
 G0 G40 X60
 Z20
 G53 X0 Z-500 M5 M9
+```
+
+### пример упорной резьбы с углами 3/30 градусов 102.8x2
+``` gcode
+(пример с вызовом подпрограммы)
+G65 P="THR" A-3 E0.06 H102.6 U0.4 X99.15 Z-14 F2
+
+(стандартный цикл на стойке)
+(данный пример для трубной резьбы)
+G76 C1 A55 X99.15 Z-14 K1.73 V0.06 Q0.4 U0.06 F2
+```
+
+### прогремма THR
+``` gcode
+
+(PARAMS:)
+( [A#0] - half angle, signed, optional)
+( E#4 - depth finish, radial)
+( H#7 - X start)
+( [Q#16] - angle for shifting the start angle, 0..360, optional)
+( [R#17] - taper amount, signed, radial, optional)
+( U#20 - depth start, radial)
 ```
