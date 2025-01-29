@@ -72,6 +72,7 @@ G76 C1 A55 X99.15 Z-14 K1.73 V0.06 Q0.4 U0.06 F2
 ```
 
 ### программа THR для резьб
+
 ``` gcode
 
 (PARAMS:)
@@ -96,7 +97,37 @@ G0 G91 Z[#27 / 2 * TAN[#0]]
 #41 = 0 (Z offset cur)
 WHILE [#31 LT #30]
   #31 = #31 + 1
+  #32 = [2 * #20 + #4 * [#31 - 1]] / 2 * #31 (current ar. pr. sum of depths)
+  #40 = #7 + 2 * #29 * #32
+  #33 = #41 (Z offset prev)
+  #41 = #32 * TAN[#0]
+  G0 G91 Z[#41 - #33]
+  G90 G82 X#40 Z#25 P#16 I#17 F#5 R-0.001 (R-BUG)
+ENDW
+G0
+M99
 
 ```
+
+### подготовка кулачков на левом шпинделе (реаольверка)
+
+``` gcode
+
+N10 (Rastochka)
+
+#1 = 40 (X start)
+#2 = 50 (X end)
+#3 = 2 (Z start)
+#4 = -10 (Z end)
+#5 = 2 ( glubina na storonu)
+
+G0 G40 G54 G90 G95
+G53 X0 Z-500
+T0101
+GETD S = 4
+G109 C0
+M3 G97 S700 F0.2
+```
+
 
 
