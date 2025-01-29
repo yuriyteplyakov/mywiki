@@ -81,6 +81,21 @@ G76 C1 A55 X99.15 Z-14 K1.73 V0.06 Q0.4 U0.06 F2
 ( [Q#16] - angle for shifting the start angle, 0..360, optional)
 ( [R#17] - taper amount, signed, radial, optional)
 ( U#20 - depth start, radial)
+( X#23 - X end)
+( Z#25 - Z end)
+( F#5 - pitch)
+
+#27 = #23 - #7 (X traverse, signed)
+#28 = ABS[#27] (X traverse, unsigned)
+
+#29 = #27 / #28 (X step signe)
+#30 = FUP[#28 / [#4 + #20]] (algorithm program: num of cuts)
+#4 = [#28 / #30 - 2 * #20] / [#30 - 1] (algorithm program: difference)
+#31 = 0 (count)
+G0 G91 Z[#27 / 2 * TAN[#0]]
+#41 = 0 (Z offset cur)
+WHILE [#31 LT #30]
+  #31 = #31 + 1
 ```
 
 
