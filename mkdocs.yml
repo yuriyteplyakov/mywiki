@@ -3,7 +3,6 @@ site_url: https://yuriyteplyakov.github.io/mywiki/
 nav:
   - главная: index.md
   - Machine learning:
-    
   - DJANGO:
     - ENV: Django/env.md
     - PIP: Django/pip.md
@@ -50,9 +49,6 @@ theme:
 
 dev_addr:
   127.0.0.1:8200
-
-extra_javascript:
-  - https://mozilla.github.io/pdf.js/build/pdf.js
 
 markdown_extensions:
     - admonition
