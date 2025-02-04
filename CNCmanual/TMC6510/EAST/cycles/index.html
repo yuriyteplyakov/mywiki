@@ -972,6 +972,147 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    LATHE
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            LATHE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HT6L
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            HT6L
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../HT6L/cycles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cycles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../HT6L/codes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    M-G codes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -998,110 +1139,110 @@
 
 <h2 id="2">Для канала 2</h2>
 <h3 id="_1">Упрощенные циклы продольного и поперечного точения</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">N</span><span class="m">10</span><span class="w"> </span>(CHERN PROHOD)
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">G0 </span>G40 G54 G90 G95
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>(G95 - подача на оборот)
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">G53 </span><span class="k">X</span><span class="m">0</span><span class="w"> </span><span class="k">Z</span><span class="m">-500</span><span class="w"> </span>(машинные координаты)
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">T</span><span class="m">0101</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>GETD S = 4 (захват левого токарного шпинделя)
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nb">G109 </span><span class="k">C</span><span class="m">0</span><span class="w"> </span>(переключение шпинделя в режим скорости)
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">M3 </span>G97 S360 F0.3
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>(G96 - отключение постоянной скорости резания на данном оборудовании не работает)
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">X</span><span class="m">112</span><span class="w"> </span><span class="k">Z</span><span class="m">20</span><span class="w"> </span>(подьезд на безопасном расстоянии от детали)
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">Z</span><span class="m">3</span><span class="w"> </span>M8
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nb">G81 </span><span class="k">X</span><span class="m">60</span><span class="w"> </span><span class="k">Z</span><span class="m">0.1</span><span class="w"> </span>(упрощенный цикл поперечного точения)
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c">;G0 Z1 (G0 его отменяет, но можно и без этого, если дальше следует другой цикл)</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nb">G80 </span><span class="k">X</span><span class="m">106</span><span class="w"> </span><span class="k">Z</span><span class="m">-13</span><span class="w"> </span>(цикл продольного точения)
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">X</span><span class="m">104</span><span class="w"> </span>(здесь указываются промежуточные диаметры, вместо глубины резания)
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nb">G0 </span><span class="k">X</span><span class="m">99.6</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="nb">G1 </span><span class="k">Z</span><span class="m">0</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="k">Z</span><span class="m">-1.6</span><span class="w"> </span><span class="k">X</span><span class="m">104</span><span class="w"> </span>(предварительная фаска)
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="nb">G0 </span>G53 X0 Z-500 M5 M9
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="nb">M1</span>
+<div class="highlight"><pre><span></span><code><span class="k">N</span><span class="m">10</span><span class="w"> </span>(CHERN PROHOD)
+<span class="nb">G0 </span>G40 G54 G90 G95
+(G95 - подача на оборот)
+<span class="nb">G53 </span><span class="k">X</span><span class="m">0</span><span class="w"> </span><span class="k">Z</span><span class="m">-500</span><span class="w"> </span>(машинные координаты)
+<span class="k">T</span><span class="m">0101</span>
+GETD S = 4 (захват левого токарного шпинделя)
+<span class="nb">G109 </span><span class="k">C</span><span class="m">0</span><span class="w"> </span>(переключение шпинделя в режим скорости)
+<span class="nb">M3 </span>G97 S360 F0.3
+(G96 - отключение постоянной скорости резания на данном оборудовании не работает)
+<span class="k">X</span><span class="m">112</span><span class="w"> </span><span class="k">Z</span><span class="m">20</span><span class="w"> </span>(подьезд на безопасном расстоянии от детали)
+<span class="k">Z</span><span class="m">3</span><span class="w"> </span>M8
+<span class="nb">G81 </span><span class="k">X</span><span class="m">60</span><span class="w"> </span><span class="k">Z</span><span class="m">0.1</span><span class="w"> </span>(упрощенный цикл поперечного точения)
+<span class="c">;G0 Z1 (G0 его отменяет, но можно и без этого, если дальше следует другой цикл)</span>
+<span class="nb">G80 </span><span class="k">X</span><span class="m">106</span><span class="w"> </span><span class="k">Z</span><span class="m">-13</span><span class="w"> </span>(цикл продольного точения)
+<span class="k">X</span><span class="m">104</span><span class="w"> </span>(здесь указываются промежуточные диаметры, вместо глубины резания)
+<span class="nb">G0 </span><span class="k">X</span><span class="m">99.6</span>
+<span class="nb">G1 </span><span class="k">Z</span><span class="m">0</span>
+<span class="k">Z</span><span class="m">-1.6</span><span class="w"> </span><span class="k">X</span><span class="m">104</span><span class="w"> </span>(предварительная фаска)
+<span class="nb">G0 </span>G53 X0 Z-500 M5 M9
+<span class="nb">M1</span>
 </code></pre></div>
 <h3 id="_2">Цикл наружного точения со снятием припуска</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">G71 </span><span class="k">U</span><span class="m">2</span><span class="w"> </span><span class="k">R</span><span class="m">0.5</span><span class="w"> </span><span class="k">P</span><span class="m">11</span><span class="w"> </span><span class="k">Q</span><span class="m">12</span><span class="w"> </span><span class="k">X</span><span class="m">0.0001</span><span class="w"> </span><span class="k">Z</span><span class="m">0</span><span class="w"> </span>(припуск по X микронный, без него цикл не срабатывает)
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>GOTO 13
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>(исправлен баг, чтобы не ходил второй раз по чистовому проходу)
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">N</span><span class="m">11</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">N</span><span class="m">12</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">N</span><span class="m">13</span><span class="w"> </span>G0
+<div class="highlight"><pre><span></span><code><span class="nb">G71 </span><span class="k">U</span><span class="m">2</span><span class="w"> </span><span class="k">R</span><span class="m">0.5</span><span class="w"> </span><span class="k">P</span><span class="m">11</span><span class="w"> </span><span class="k">Q</span><span class="m">12</span><span class="w"> </span><span class="k">X</span><span class="m">0.0001</span><span class="w"> </span><span class="k">Z</span><span class="m">0</span><span class="w"> </span>(припуск по X микронный, без него цикл не срабатывает)
+GOTO 13
+(исправлен баг, чтобы не ходил второй раз по чистовому проходу)
+<span class="k">N</span><span class="m">11</span>
+<span class="k">N</span><span class="m">12</span>
+<span class="k">N</span><span class="m">13</span><span class="w"> </span>G0
 </code></pre></div>
 <h3 id="_3">Цикл внутреннего растачивания со ступенькой</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">X</span><span class="m">60</span><span class="w"> </span><span class="k">Z</span><span class="m">20</span><span class="w"> </span>M8
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>(Упрощенный цикл)
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">G81 </span><span class="k">X</span><span class="m">106</span><span class="w"> </span><span class="k">Z</span><span class="m">0</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">G0 </span><span class="k">X</span><span class="m">66</span><span class="w"> </span><span class="k">Z</span><span class="m">2</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">G80 </span><span class="k">X</span><span class="m">69</span><span class="w"> </span><span class="k">Z</span><span class="m">-2.1</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">X</span><span class="m">72</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">X</span><span class="m">74</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>(FINISH)
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">#</span><span class="m">1</span><span class="w"> </span>= 0.4 (RAD SKRUGL)
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nb">G0 </span>G41 X[75.2 + 2 * #1] (G41 корректор, если материал слева)
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nb">G1 </span><span class="k">Z</span><span class="m">0</span><span class="w"> </span><span class="k">F</span><span class="m">0.3</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="nb">G2 </span><span class="k">X</span><span class="m">75.2</span><span class="w"> </span>Z[-#1] R#1 F0.05
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="nb">G1 </span><span class="k">Z</span><span class="m">-2.125</span><span class="w"> </span><span class="k">F</span><span class="m">0.2</span><span class="w"> </span>(D75 CHIST)
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="k">X</span><span class="m">66.06</span><span class="w"> </span>Z[-2.125 - #1] R#1 F0.05
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="nb">G0 </span>G40 X60
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="k">Z</span><span class="m">20</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="nb">G53 </span><span class="k">X</span><span class="m">0</span><span class="w"> </span><span class="k">Z</span><span class="m">-500</span><span class="w"> </span>M5 M9
+<div class="highlight"><pre><span></span><code><span class="k">X</span><span class="m">60</span><span class="w"> </span><span class="k">Z</span><span class="m">20</span><span class="w"> </span>M8
+(Упрощенный цикл)
+<span class="nb">G81 </span><span class="k">X</span><span class="m">106</span><span class="w"> </span><span class="k">Z</span><span class="m">0</span>
+<span class="nb">G0 </span><span class="k">X</span><span class="m">66</span><span class="w"> </span><span class="k">Z</span><span class="m">2</span>
+<span class="nb">G80 </span><span class="k">X</span><span class="m">69</span><span class="w"> </span><span class="k">Z</span><span class="m">-2.1</span>
+<span class="k">X</span><span class="m">72</span>
+<span class="k">X</span><span class="m">74</span>
+(FINISH)
+<span class="k">#</span><span class="m">1</span><span class="w"> </span>= 0.4 (RAD SKRUGL)
+<span class="nb">G0 </span>G41 X[75.2 + 2 * #1] (G41 корректор, если материал слева)
+<span class="nb">G1 </span><span class="k">Z</span><span class="m">0</span><span class="w"> </span><span class="k">F</span><span class="m">0.3</span>
+<span class="nb">G2 </span><span class="k">X</span><span class="m">75.2</span><span class="w"> </span>Z[-#1] R#1 F0.05
+<span class="nb">G1 </span><span class="k">Z</span><span class="m">-2.125</span><span class="w"> </span><span class="k">F</span><span class="m">0.2</span><span class="w"> </span>(D75 CHIST)
+<span class="k">X</span><span class="m">66.06</span><span class="w"> </span>Z[-2.125 - #1] R#1 F0.05
+<span class="nb">G0 </span>G40 X60
+<span class="k">Z</span><span class="m">20</span>
+<span class="nb">G53 </span><span class="k">X</span><span class="m">0</span><span class="w"> </span><span class="k">Z</span><span class="m">-500</span><span class="w"> </span>M5 M9
 </code></pre></div>
 <h3 id="330-1028x2">пример упорной резьбы с углами 3/30 градусов 102.8x2</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>(пример с вызовом подпрограммы)
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">G65 </span>P=&quot;THR&quot; A-3 E0.06 H102.6 U0.4 X99.15 Z-14 F2
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>(стандартный цикл на стойке)
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>(данный пример для трубной резьбы)
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nb">G76 </span><span class="k">C</span><span class="m">1</span><span class="w"> </span><span class="k">A</span><span class="m">55</span><span class="w"> </span><span class="k">X</span><span class="m">99.15</span><span class="w"> </span><span class="k">Z</span><span class="m">-14</span><span class="w"> </span><span class="k">K</span><span class="m">1.73</span><span class="w"> </span><span class="k">V</span><span class="m">0.06</span><span class="w"> </span><span class="k">Q</span><span class="m">0.4</span><span class="w"> </span><span class="k">U</span><span class="m">0.06</span><span class="w"> </span><span class="k">F</span><span class="m">2</span>
+<div class="highlight"><pre><span></span><code>(пример с вызовом подпрограммы)
+<span class="nb">G65 </span>P=&quot;THR&quot; A-3 E0.06 H102.6 U0.4 X99.15 Z-14 F2
+
+(стандартный цикл на стойке)
+(данный пример для трубной резьбы)
+<span class="nb">G76 </span><span class="k">C</span><span class="m">1</span><span class="w"> </span><span class="k">A</span><span class="m">55</span><span class="w"> </span><span class="k">X</span><span class="m">99.15</span><span class="w"> </span><span class="k">Z</span><span class="m">-14</span><span class="w"> </span><span class="k">K</span><span class="m">1.73</span><span class="w"> </span><span class="k">V</span><span class="m">0.06</span><span class="w"> </span><span class="k">Q</span><span class="m">0.4</span><span class="w"> </span><span class="k">U</span><span class="m">0.06</span><span class="w"> </span><span class="k">F</span><span class="m">2</span>
 </code></pre></div>
 <h3 id="thr">программа THR для резьб</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>(PARAMS:)
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>( [A#0] - half angle, signed, optional)
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>( E#4 - depth finish, radial)
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>( H#7 - X start)
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>( [Q#16] - angle for shifting the start angle, 0..360, optional)
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>( [R#17] - taper amount, signed, radial, optional)
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>( U#20 - depth start, radial)
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>( X#23 - X end)
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>( Z#25 - Z end)
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>( F#5 - pitch)
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="k">#</span><span class="m">27</span><span class="w"> </span>= #23 - #7 (X traverse, signed)
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="k">#</span><span class="m">28</span><span class="w"> </span>= ABS[#27] (X traverse, unsigned)
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="k">#</span><span class="m">29</span><span class="w"> </span>= #27 / #28 (X step signe)
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="k">#</span><span class="m">30</span><span class="w"> </span>= FUP[#28 / [#4 + #20]] (algorithm program: num of cuts)
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="k">#</span><span class="m">4</span><span class="w"> </span>= [#28 / #30 - 2 * #20] / [#30 - 1] (algorithm program: difference)
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="k">#</span><span class="m">31</span><span class="w"> </span>= 0 (count)
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="nb">G0 </span>G91 Z[#27 / 2 * TAN[#0]]
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="k">#</span><span class="m">41</span><span class="w"> </span>= 0 (Z offset cur)
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>WHILE [#31 LT #30]
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">  </span><span class="k">#</span><span class="m">31</span><span class="w"> </span>= #31 + 1
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">  </span><span class="k">#</span><span class="m">32</span><span class="w"> </span>= [2 * #20 + #4 * [#31 - 1]] / 2 * #31 (current ar. pr. sum of depths)
-<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">  </span><span class="k">#</span><span class="m">40</span><span class="w"> </span>= #7 + 2 * #29 * #32
-<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">  </span><span class="k">#</span><span class="m">33</span><span class="w"> </span>= #41 (Z offset prev)
-<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">  </span><span class="k">#</span><span class="m">41</span><span class="w"> </span>= #32 * TAN[#0]
-<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">  </span>G0 G91 Z[#41 - #33]
-<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">  </span>G90 G82 X#40 Z#25 P#16 I#17 F#5 R-0.001 (R-BUG)
-<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>ENDW
-<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="nb">G0</span>
-<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="nb">M99</span>
+<div class="highlight"><pre><span></span><code>(PARAMS:)
+( [A#0] - half angle, signed, optional)
+( E#4 - depth finish, radial)
+( H#7 - X start)
+( [Q#16] - angle for shifting the start angle, 0..360, optional)
+( [R#17] - taper amount, signed, radial, optional)
+( U#20 - depth start, radial)
+( X#23 - X end)
+( Z#25 - Z end)
+( F#5 - pitch)
+
+<span class="k">#</span><span class="m">27</span><span class="w"> </span>= #23 - #7 (X traverse, signed)
+<span class="k">#</span><span class="m">28</span><span class="w"> </span>= ABS[#27] (X traverse, unsigned)
+
+<span class="k">#</span><span class="m">29</span><span class="w"> </span>= #27 / #28 (X step signe)
+<span class="k">#</span><span class="m">30</span><span class="w"> </span>= FUP[#28 / [#4 + #20]] (algorithm program: num of cuts)
+<span class="k">#</span><span class="m">4</span><span class="w"> </span>= [#28 / #30 - 2 * #20] / [#30 - 1] (algorithm program: difference)
+<span class="k">#</span><span class="m">31</span><span class="w"> </span>= 0 (count)
+<span class="nb">G0 </span>G91 Z[#27 / 2 * TAN[#0]]
+<span class="k">#</span><span class="m">41</span><span class="w"> </span>= 0 (Z offset cur)
+WHILE [#31 LT #30]
+<span class="w">  </span><span class="k">#</span><span class="m">31</span><span class="w"> </span>= #31 + 1
+<span class="w">  </span><span class="k">#</span><span class="m">32</span><span class="w"> </span>= [2 * #20 + #4 * [#31 - 1]] / 2 * #31 (current ar. pr. sum of depths)
+<span class="w">  </span><span class="k">#</span><span class="m">40</span><span class="w"> </span>= #7 + 2 * #29 * #32
+<span class="w">  </span><span class="k">#</span><span class="m">33</span><span class="w"> </span>= #41 (Z offset prev)
+<span class="w">  </span><span class="k">#</span><span class="m">41</span><span class="w"> </span>= #32 * TAN[#0]
+<span class="w">  </span>G0 G91 Z[#41 - #33]
+<span class="w">  </span>G90 G82 X#40 Z#25 P#16 I#17 F#5 R-0.001 (R-BUG)
+ENDW
+<span class="nb">G0</span>
+<span class="nb">M99</span>
 </code></pre></div>
 <h3 id="_4">подготовка кулачков на левом шпинделе (револьверка)</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">N</span><span class="m">10</span><span class="w"> </span>(Rastochka)
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">#</span><span class="m">1</span><span class="w"> </span>= 40 (X start)
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">#</span><span class="m">2</span><span class="w"> </span>= 50 (X end)
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">#</span><span class="m">3</span><span class="w"> </span>= 2 (Z start)
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">#</span><span class="m">4</span><span class="w"> </span>= -10 (Z end)
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="k">#</span><span class="m">5</span><span class="w"> </span>= 2 ( glubina na storonu)
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nb">G0 </span>G40 G54 G90 G95
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="nb">G53 </span><span class="k">X</span><span class="m">0</span><span class="w"> </span><span class="k">Z</span><span class="m">-500</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="k">T</span><span class="m">0101</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>GETD S = 4
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="nb">G109 </span><span class="k">C</span><span class="m">0</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="nb">M3 </span>G97 S700 F0.2
+<div class="highlight"><pre><span></span><code><span class="k">N</span><span class="m">10</span><span class="w"> </span>(Rastochka)
+
+<span class="k">#</span><span class="m">1</span><span class="w"> </span>= 40 (X start)
+<span class="k">#</span><span class="m">2</span><span class="w"> </span>= 50 (X end)
+<span class="k">#</span><span class="m">3</span><span class="w"> </span>= 2 (Z start)
+<span class="k">#</span><span class="m">4</span><span class="w"> </span>= -10 (Z end)
+<span class="k">#</span><span class="m">5</span><span class="w"> </span>= 2 ( glubina na storonu)
+
+<span class="nb">G0 </span>G40 G54 G90 G95
+<span class="nb">G53 </span><span class="k">X</span><span class="m">0</span><span class="w"> </span><span class="k">Z</span><span class="m">-500</span>
+<span class="k">T</span><span class="m">0101</span>
+GETD S = 4
+<span class="nb">G109 </span><span class="k">C</span><span class="m">0</span>
+<span class="nb">M3 </span>G97 S700 F0.2
 </code></pre></div>
 
 
