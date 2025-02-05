@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -830,6 +835,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    cycles
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -840,6 +858,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ch0" class="md-nav__link">
+    <span class="md-ellipsis">
+      программа для 1 канала (CH0)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ch2" class="md-nav__link">
+    <span class="md-ellipsis">
+      программа для 2 канала (CH2)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1033,9 +1088,266 @@
                   
 
 
-  <h1>cycles</h1>
+<h1 id="_1">Пример обработки в двухканальном режиме</h1>
+<h2 id="1-ch0">программа для 1 канала (CH0)</h2>
+<div class="highlight"><pre><span></span><code><span class="k">N</span><span class="m">20</span><span class="w"> </span>(Rastochit vnut pov na 2 shpindele)
+LATHE
+<span class="k">T</span><span class="m">10</span><span class="w"> </span>M6 (rastochnoy)
+MILL
+<span class="nb">G1008 </span><span class="k">A</span><span class="m">0</span><span class="w"> </span><span class="k">B</span><span class="m">180</span>
+<span class="k">T</span><span class="m">1010</span><span class="w"> </span>(korrektor)
+<span class="nb">G0 </span>G40 G55 G90 G95
+GETD S2 = 6
+<span class="nb">G109 </span><span class="k">U</span><span class="m">2</span>
+<span class="nb">M23 </span>G97 S2 = 510 F0.16
+<span class="k">Z</span><span class="m">-20</span>
+<span class="k">X</span><span class="m">60</span>
+<span class="nb">M8</span>
+<span class="nb">G81 </span><span class="k">X</span><span class="m">106</span><span class="w"> </span><span class="k">Z</span><span class="m">0</span><span class="w"> </span>(torec Chist na 2 shpindele)
+<span class="nb">G0 </span><span class="k">X</span><span class="m">66</span><span class="w"> </span><span class="k">Z</span><span class="m">-2</span>
+<span class="nb">G80 </span><span class="k">X</span><span class="m">69</span><span class="w"> </span><span class="k">Z</span><span class="m">2.1</span>
+<span class="k">X</span><span class="m">72</span>
+<span class="k">X</span><span class="m">74</span>
+(Finish)
+<span class="k">#</span><span class="m">1</span><span class="w"> </span>= 0.4 (rad skrugl)
+<span class="nb">G0 </span>G41 X[75.2 + 2 * #1]
+<span class="nb">G1 </span><span class="k">Z</span><span class="m">0</span><span class="w"> </span><span class="k">F</span><span class="m">0.3</span>
+<span class="nb">G2 </span><span class="k">X</span><span class="m">75.2</span><span class="w"> </span>Z[#1] R#1 F0.05 (skrugl)
+<span class="nb">G1 </span><span class="k">Z</span><span class="m">2.125</span><span class="w"> </span><span class="k">F</span><span class="m">0.2</span><span class="w"> </span>(D 75 chist)
+X[66.06 + 2 * #1] (torec chist)
+<span class="nb">G2 </span><span class="k">X</span><span class="m">66.06</span><span class="w"> </span>Z[2.125 + #1] R#1 F0.05 (skrugl)
+<span class="nb">G0 </span>G40 X60
+<span class="k">Z</span><span class="m">-20</span>
+<span class="nb">M25 </span>M9
+<span class="nb">G104 </span><span class="k">P</span><span class="m">1</span>
+<span class="nb">G53 </span><span class="k">X</span><span class="m">1100</span>
+<span class="nb">G53 </span><span class="k">Z</span><span class="m">0</span>
+<span class="nb">M1</span>
 
 
+<span class="k">N</span><span class="m">30</span><span class="w"> </span>(tochit nar pov okonch na 2 shpindele)
+<span class="nb">G53 </span><span class="k">B</span><span class="m">0</span><span class="w"> </span><span class="c">;Y.. Z..</span>
+LATHE
+<span class="nb">G104 </span><span class="k">P</span><span class="m">2</span>
+<span class="k">T</span><span class="m">12</span><span class="w"> </span>M6 (prohod chistovoy)
+<span class="nb">G104 </span><span class="k">P</span><span class="m">3</span>
+MILL
+<span class="nb">G1008 </span><span class="k">A</span><span class="m">0</span><span class="w"> </span><span class="k">B</span><span class="m">180</span>
+<span class="k">T</span><span class="m">1212</span><span class="w"> </span>(korrektor)
+<span class="nb">G0 </span>G40 G55 G90 G95
+GETD S2 = 6
+<span class="nb">G109 </span><span class="k">U</span><span class="m">2</span>
+<span class="nb">M23 </span>G97 S2 = 400
+<span class="k">X</span><span class="m">104</span><span class="w"> </span><span class="k">Z</span><span class="m">-20</span>
+<span class="nb">G42 </span><span class="k">X</span><span class="m">98.4</span><span class="w"> </span><span class="k">Z</span><span class="m">-2</span><span class="w"> </span>M8
+<span class="nb">G1 </span><span class="k">Z</span><span class="m">-0.5</span><span class="w"> </span><span class="k">F</span><span class="m">0.3</span>
+<span class="k">X</span><span class="m">102.6</span><span class="w"> </span><span class="k">Z</span><span class="m">1.6</span><span class="w"> </span><span class="k">F</span><span class="m">0.05</span><span class="w"> </span>(faska 1.6x45)
+Z[11.8 - 1.6] F0.2 (D pod rezb chist)
+<span class="k">X</span><span class="m">98.4</span><span class="w"> </span>Z[11.8 + 0.5] F0.05 (faska 1.6x45)
+<span class="k">Z</span><span class="m">14</span><span class="w"> </span><span class="k">F</span><span class="m">0.2</span>
+<span class="nb">G0 </span>G40 X110
+<span class="k">Z</span><span class="m">-20</span>
+<span class="nb">M25 </span>M9
+<span class="nb">G53 </span><span class="k">X</span><span class="m">1100</span><span class="w"> </span><span class="k">Z</span><span class="m">0</span>
+<span class="nb">M1</span>
+
+
+<span class="k">N</span><span class="m">40</span><span class="w"> </span>(tochit nar rezbuSpUp3/30 102.8x2 na 1sp)
+LATHE
+<span class="nb">G104 </span><span class="k">P</span><span class="m">6</span>
+<span class="k">T</span><span class="m">14</span><span class="w"> </span>M6 (rezbovoy) B
+MILL
+<span class="nb">G1008 </span><span class="k">A</span><span class="m">181</span><span class="w"> </span><span class="k">B</span><span class="m">90</span><span class="w"> </span>(доворот шпинделя на 1 градус для обеспечения чистоты нарезаемой резьбы)
+<span class="k">T</span><span class="m">1414</span><span class="w"> </span>(korrektor)
+<span class="nb">G0 </span>G40 G54 G90 G95
+<span class="k">Y</span><span class="m">0.75</span><span class="w"> </span><span class="k">Z</span><span class="m">20</span><span class="w"> </span>(компенсация поворота в 1 градус)
+<span class="k">X</span><span class="m">110</span>
+GETD S1 = 4
+<span class="nb">G109 </span><span class="k">C</span><span class="m">1</span>
+<span class="nb">M13 </span>G97 S1 = 315
+<span class="k">Z</span><span class="m">7</span><span class="w"> </span>M8
+<span class="nb">G65 </span>P=&quot;THR&quot; A-3 E0.03 H102.6 U0.22 X99.15 Z-14 F2
+<span class="nb">M15 </span>M9
+<span class="nb">G0 </span>G53 X1100 Z0
+<span class="nb">M1</span>
+
+
+<span class="k">N</span><span class="m">45</span><span class="w"> </span>(tochit nar rezbuSpUp3/30 102.8x2 na 2sp)
+LATHE
+<span class="k">T</span><span class="m">14</span><span class="w"> </span>M6 (rezbovoy) B
+MILL
+<span class="nb">G1008 </span><span class="k">A</span><span class="m">1</span><span class="w"> </span><span class="k">B</span><span class="m">90</span><span class="w"> </span>(доворот шпинделя на 1 градус для обеспечения чистоты нарезаемой резьбы)
+<span class="k">T</span><span class="m">1515</span><span class="w"> </span>(korrektor берем новый корректор т.к. инструмент разворачивается)
+<span class="nb">G0 </span>G40 G55 G90 G95
+<span class="k">Y</span><span class="m">-0.75</span><span class="w"> </span><span class="k">Z</span><span class="m">-20</span><span class="w"> </span>(компенсация поворота в 1 градус)
+<span class="k">X</span><span class="m">110</span>
+GETD S2 = 6
+<span class="nb">G109 </span><span class="k">U</span><span class="m">2</span>
+<span class="nb">G146 </span><span class="k">P</span><span class="m">1</span>
+<span class="nb">M23 </span>G97 S1 = 315
+<span class="k">Z</span><span class="m">-7</span><span class="w"> </span>M8
+<span class="nb">G65 </span>P=&quot;THR&quot; A3 E0.03 H102.6 U0.22 X99.15 Z14 F2
+<span class="nb">M25 </span>M9
+<span class="nb">G147 </span><span class="k">P</span><span class="m">1</span>
+<span class="nb">G0 </span>G53 X1100 Z0
+<span class="nb">M1</span>
+
+
+<span class="k">N</span><span class="m">50</span><span class="w"> </span>(podchistit zausenci)
+LATHE
+<span class="k">T</span><span class="m">10</span><span class="w"> </span>M6 (rastochnoy)
+<span class="nb">G104 </span><span class="k">P</span><span class="m">4</span>
+MILL
+<span class="nb">G1008 </span><span class="k">A</span><span class="m">0</span><span class="w"> </span><span class="k">B</span><span class="m">135</span>
+<span class="k">T</span><span class="m">1010</span><span class="w"> </span>(korrektor)
+<span class="nb">G0 </span>G40 G55 G90 G95
+GETD S2 = 6
+<span class="nb">G109 </span><span class="k">U</span><span class="m">2</span>
+<span class="nb">M23 </span>G97 S2 = 400
+<span class="k">X</span><span class="m">104</span><span class="w"> </span><span class="k">Z</span><span class="m">-20</span>
+<span class="nb">G42 </span><span class="k">X</span><span class="m">98.4</span><span class="w"> </span><span class="k">Z</span><span class="m">-2</span>
+<span class="nb">G1 </span><span class="k">Z</span><span class="m">-0.5</span><span class="w"> </span><span class="k">F</span><span class="m">0.3</span><span class="w"> </span>M8
+<span class="k">X</span><span class="m">102.6</span><span class="w"> </span><span class="k">Z</span><span class="m">1.6</span><span class="w"> </span><span class="k">F</span><span class="m">0.05</span><span class="w"> </span>M8 (faska 1.6x45)
+Z[11.8 - 1.6] F0.2 (D pod rezb chist)
+<span class="k">X</span><span class="m">98.4</span><span class="w"> </span>Z[11.8 + 0.5] F0.05 (faska 1.6x45)
+<span class="k">Z</span><span class="m">14</span><span class="w"> </span><span class="k">F</span><span class="m">0.2</span>
+<span class="nb">G0 </span>G40 X110
+<span class="k">Z</span><span class="m">-20</span><span class="w"> </span>M25 M9
+<span class="nb">G53 </span><span class="k">X</span><span class="m">1100</span><span class="w"> </span><span class="k">Z</span><span class="m">0</span>
+<span class="nb">M1</span>
+
+
+<span class="k">N</span><span class="m">60</span><span class="w"> </span>(kalibrovka rezby na 1sp)
+LATHE
+<span class="nb">G104 </span><span class="k">P</span><span class="m">5</span><span class="w"> </span>(whait CH2 debur end)
+<span class="k">T</span><span class="m">14</span><span class="w"> </span>M6
+<span class="nb">G1008 </span><span class="k">A</span><span class="m">181</span><span class="w"> </span><span class="k">B</span><span class="m">90</span>
+<span class="k">T</span><span class="m">1414</span><span class="w"> </span>(korrektor)
+<span class="nb">G0 </span>G40 G54 G90 G95
+<span class="k">Y</span><span class="m">0.75</span><span class="w"> </span><span class="k">Z</span><span class="m">20</span>
+<span class="k">X</span><span class="m">110</span>
+GETD S1 = 4
+<span class="nb">G109 </span><span class="k">C</span><span class="m">1</span>
+<span class="nb">M13 </span>G97 S1 = 315
+<span class="k">Z</span><span class="m">7</span><span class="w"> </span>M8
+<span class="nb">G82 </span>X[99.15 + 0.05] R-0.0001 Z-14 F2
+<span class="nb">M15 </span>M9
+<span class="nb">G0 </span>G53 X1100 Z0
+<span class="nb">M1</span>
+
+
+<span class="k">N</span><span class="m">65</span><span class="w"> </span>(kalibrovka rezby na 2sp)
+LATHE
+<span class="k">T</span><span class="m">14</span><span class="w"> </span>M6
+MILL
+<span class="nb">G1008 </span><span class="k">A</span><span class="m">1</span><span class="w"> </span><span class="k">B</span><span class="m">90</span>
+<span class="k">T</span><span class="m">1515</span><span class="w"> </span>(korrektor NEW)
+<span class="nb">G0 </span>G40 G54 G90 G95
+<span class="k">Y</span><span class="m">-0.75</span><span class="w"> </span><span class="k">Z</span><span class="m">-20</span>
+<span class="k">X</span><span class="m">110</span>
+GETD S2 = 6
+<span class="nb">G109 </span><span class="k">U</span><span class="m">2</span>
+<span class="nb">G146 </span><span class="k">P</span><span class="m">1</span>
+<span class="nb">M23 </span>G97 S2 = 315
+<span class="k">Z</span><span class="m">-7</span><span class="w"> </span>M8
+<span class="nb">G82 </span>X[99.15 + 0.05] R0.0001 Z14 F2
+<span class="nb">M25 </span>M9
+<span class="nb">G0 </span>G53 X1100 Z0
+<span class="nb">G147 </span><span class="k">P</span><span class="m">1</span>
+<span class="nb">G104 </span><span class="k">P</span><span class="m">7</span>
+<span class="nb">M1</span>
+</code></pre></div>
+<h2 id="2-ch2">программа для 2 канала (CH2)</h2>
+<div class="highlight"><pre><span></span><code><span class="k">N</span><span class="m">20</span><span class="w"> </span>(Rastochit vnut pov na 1 shpindele)
+<span class="nb">G0 </span>G40 G54 G90 G95
+<span class="nb">G53 </span><span class="k">X</span><span class="m">0</span><span class="w"> </span><span class="k">Z</span><span class="m">-700</span>
+<span class="k">T</span><span class="m">1010</span><span class="w"> </span>(rastochnoy)
+GETD S1 = 4
+<span class="nb">G109 </span><span class="k">C</span><span class="m">1</span>
+<span class="nb">G104 </span><span class="k">P</span><span class="m">1</span><span class="w"> </span>(whait CH0 I.D.)
+<span class="nb">M13 </span>G97 S1 = 510 F0.16
+<span class="k">Z</span><span class="m">20</span>
+<span class="k">X</span><span class="m">60</span>
+<span class="nb">M8</span>
+<span class="nb">G81 </span><span class="k">X</span><span class="m">106</span><span class="w"> </span><span class="k">Z</span><span class="m">0</span><span class="w"> </span>(torec Chist na 1 shpindele)
+<span class="nb">G0 </span><span class="k">X</span><span class="m">66</span><span class="w"> </span><span class="k">Z</span><span class="m">-2</span>
+<span class="nb">G80 </span><span class="k">X</span><span class="m">69</span><span class="w"> </span><span class="k">Z</span><span class="m">-2.1</span>
+<span class="k">X</span><span class="m">72</span>
+<span class="k">X</span><span class="m">74</span>
+(Finish)
+<span class="k">#</span><span class="m">1</span><span class="w"> </span>= 0.4 (rad skrugl)
+<span class="nb">G0 </span>G41 X[75.2 + 2 * #1]
+<span class="nb">G1 </span><span class="k">Z</span><span class="m">0</span><span class="w"> </span><span class="k">F</span><span class="m">0.3</span>
+<span class="nb">G2 </span><span class="k">X</span><span class="m">75.2</span><span class="w"> </span>Z[-#1] R#1 F0.05 (skrugl)
+<span class="nb">G1 </span><span class="k">Z</span><span class="m">-2.125</span><span class="w"> </span><span class="k">F</span><span class="m">0.2</span><span class="w"> </span>(D 75 chist)
+X[66.06 + 2 * #1] (torec chist)
+<span class="nb">G2 </span><span class="k">X</span><span class="m">66.06</span><span class="w"> </span>Z[-2.125 - #1] R#1 F0.05 (skrugl)
+<span class="nb">G0 </span>G40 X60
+<span class="k">Z</span><span class="m">20</span>
+<span class="nb">M15 </span>M9
+<span class="nb">G104 </span><span class="k">P</span><span class="m">2</span><span class="w"> </span>(allow CH0 toolchange)
+<span class="nb">G53 </span><span class="k">X</span><span class="m">0</span>
+<span class="nb">M1</span>
+
+
+<span class="k">N</span><span class="m">30</span><span class="w"> </span>(tochit nar pov okonch na 1 shpindele)
+<span class="nb">G0 </span>G40 G54 G90 G95
+<span class="nb">G53 </span><span class="k">X</span><span class="m">0</span>
+<span class="k">T</span><span class="m">0404</span><span class="w"> </span>(prohod)
+GETD S1 = 4
+<span class="nb">G109 </span><span class="k">C</span><span class="m">1</span>
+<span class="nb">G104 </span><span class="k">P</span><span class="m">3</span><span class="w"> </span>(allow CH0 toolchange)
+<span class="nb">M13 </span>G97 S1 = 400
+<span class="k">X</span><span class="m">104</span><span class="w"> </span><span class="k">Z</span><span class="m">20</span>
+<span class="nb">G42 </span><span class="k">X</span><span class="m">98.4</span><span class="w"> </span><span class="k">Z</span><span class="m">2</span><span class="w"> </span>M8
+<span class="nb">G1 </span><span class="k">Z</span><span class="m">0.5</span><span class="w"> </span><span class="k">F</span><span class="m">0.3</span>
+<span class="k">X</span><span class="m">102.6</span><span class="w"> </span><span class="k">Z</span><span class="m">-1.6</span><span class="w"> </span><span class="k">F</span><span class="m">0.05</span><span class="w"> </span>(faska 1.6x45)
+Z[- 11.8 + 1.6] F0.2 (D pod rezb chist)
+<span class="k">X</span><span class="m">98.4</span><span class="w"> </span>Z[- 11.8 - 0.5] F0.05 (faska 1.6x45)
+<span class="k">Z</span><span class="m">-14</span><span class="w"> </span><span class="k">F</span><span class="m">0.2</span>
+<span class="nb">G0 </span>G40 X110
+<span class="k">Z</span><span class="m">20</span>
+<span class="nb">M15 </span>M9
+<span class="nb">G104 </span><span class="k">P</span><span class="m">6</span><span class="w"> </span>(allow CH0 toolchange)
+<span class="nb">G53 </span><span class="k">X</span><span class="m">0</span>
+<span class="nb">M1</span>
+
+
+<span class="k">N</span><span class="m">40</span><span class="w"> </span>(tochit nar rezbuSpUp3/30 102.8x2 na 1sp)
+
+
+<span class="k">N</span><span class="m">45</span><span class="w"> </span>(tochit nar rezbuSpUp3/30 102.8x2 na 2sp)
+
+
+<span class="k">N</span><span class="m">50</span><span class="w"> </span>(podchistit zausenci)
+<span class="nb">G0 </span>G40 G54 G90 G95
+<span class="nb">G53 </span><span class="k">X</span><span class="m">0</span>
+<span class="k">T</span><span class="m">0404</span><span class="w"> </span>(prohod chist)
+GETD S1 = 4
+<span class="nb">G109 </span><span class="k">C</span><span class="m">1</span>
+<span class="nb">G104 </span><span class="k">P</span><span class="m">4</span><span class="w"> </span>(wait CH0 THR, toolchange)
+<span class="nb">M13 </span>G97 S1 = 400
+<span class="k">X</span><span class="m">104</span><span class="w"> </span><span class="k">Z</span><span class="m">20</span>
+<span class="nb">G42 </span><span class="k">X</span><span class="m">98.4</span><span class="w"> </span><span class="k">Z</span><span class="m">2</span>
+<span class="nb">G1 </span><span class="k">Z</span><span class="m">0.5</span><span class="w"> </span><span class="k">F</span><span class="m">0.3</span><span class="w"> </span>M8
+<span class="k">X</span><span class="m">102.6</span><span class="w"> </span><span class="k">Z</span><span class="m">-1.6</span><span class="w"> </span><span class="k">F</span><span class="m">0.05</span><span class="w"> </span>M8 (faska 1.6x45)
+Z[- 11.8 + 1.6] F0.2 (D pod rezb chist)
+<span class="k">X</span><span class="m">98.4</span><span class="w"> </span>Z[- 11.8 - 0.5] F0.05 (faska 1.6x45)
+<span class="k">Z</span><span class="m">-14</span><span class="w"> </span><span class="k">F</span><span class="m">0.2</span>
+<span class="nb">G0 </span>G40 X110
+<span class="k">Z</span><span class="m">20</span>
+<span class="nb">M15 </span>M9
+<span class="nb">G104 </span><span class="k">P</span><span class="m">5</span><span class="w"> </span>(allow CH0 toolchange)
+<span class="nb">G53 </span><span class="k">X</span><span class="m">0</span><span class="w"> </span><span class="k">Z</span><span class="m">-500</span>
+<span class="nb">M1</span>
+
+
+<span class="k">N</span><span class="m">60</span><span class="w"> </span>(kalibrovka rezby na 1sp)
+
+
+<span class="k">N</span><span class="m">65</span><span class="w"> </span>(kalibrovka rezby na 2sp)
+<span class="nb">G104 </span><span class="k">P</span><span class="m">7</span><span class="w"> </span>(sync EOP)
+</code></pre></div>
 
 
 
