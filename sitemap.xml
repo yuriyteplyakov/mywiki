@@ -2,58 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://yuriyteplyakov.github.io/mywiki/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
          <loc>https://yuriyteplyakov.github.io/mywiki/CNCmanual/HT6L/codes/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
          <loc>https://yuriyteplyakov.github.io/mywiki/CNCmanual/HT6L/cycles/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
          <loc>https://yuriyteplyakov.github.io/mywiki/CNCmanual/TMC6510/TMC6510/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
          <loc>https://yuriyteplyakov.github.io/mywiki/CNCmanual/TMC6510/codes/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
          <loc>https://yuriyteplyakov.github.io/mywiki/CNCmanual/TMC6510/EAST/cycles/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
          <loc>https://yuriyteplyakov.github.io/mywiki/CNCmanual/TMC6510/WEST/cycles/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
          <loc>https://yuriyteplyakov.github.io/mywiki/Django/env/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
          <loc>https://yuriyteplyakov.github.io/mywiki/Django/models/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
          <loc>https://yuriyteplyakov.github.io/mywiki/Django/pip/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
          <loc>https://yuriyteplyakov.github.io/mywiki/Django/project/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
          <loc>https://yuriyteplyakov.github.io/mywiki/Django/settings/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
          <loc>https://yuriyteplyakov.github.io/mywiki/GIT/git/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-07-10</lastmod>
+    </url>
+    <url>
+         <loc>https://yuriyteplyakov.github.io/mywiki/SQL/createdb/</loc>
+         <lastmod>2025-07-10</lastmod>
+    </url>
+    <url>
+         <loc>https://yuriyteplyakov.github.io/mywiki/SQL/crud/</loc>
+         <lastmod>2025-07-10</lastmod>
+    </url>
+    <url>
+         <loc>https://yuriyteplyakov.github.io/mywiki/SQL/join/</loc>
+         <lastmod>2025-07-10</lastmod>
+    </url>
+    <url>
+         <loc>https://yuriyteplyakov.github.io/mywiki/SQL/sort/</loc>
+         <lastmod>2025-07-10</lastmod>
+    </url>
+    <url>
+         <loc>https://yuriyteplyakov.github.io/mywiki/SQL/sql/</loc>
+         <lastmod>2025-07-10</lastmod>
+    </url>
+    <url>
+         <loc>https://yuriyteplyakov.github.io/mywiki/for%203dprint/3d/</loc>
+         <lastmod>2025-07-10</lastmod>
+    </url>
+    <url>
+         <loc>https://yuriyteplyakov.github.io/mywiki/for%203dprint/voron/</loc>
+         <lastmod>2025-07-10</lastmod>
     </url>
     <url>
          <loc>https://yuriyteplyakov.github.io/mywiki/machine_learning/ml/</loc>
-         <lastmod>2025-02-05</lastmod>
+         <lastmod>2025-07-10</lastmod>
     </url>
 </urlset>
